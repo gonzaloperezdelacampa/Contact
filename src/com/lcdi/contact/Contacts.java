@@ -10,12 +10,10 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "contacts")
 public class Contacts {
-	
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 	protected Contacts() {
 	}
 
