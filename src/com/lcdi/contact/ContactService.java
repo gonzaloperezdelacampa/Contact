@@ -12,7 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 public class ContactService {
 	@Autowired ContactRepository repo;
 	
-	@SuppressWarnings("null")
 	public void save(Contacts contact) {
 		repo.save(contact);
 	}
@@ -25,7 +24,6 @@ public class ContactService {
 		return repo.findById(id).get();
 	}
 	
-	@SuppressWarnings("null")
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}
