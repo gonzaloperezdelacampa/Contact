@@ -11,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class CustomerService {
 	@Autowired CustomerRepository repo;
 	
+	@SuppressWarnings("null")
 	public void save(Customer customer) {
 		repo.save(customer);
 	}
@@ -19,10 +20,12 @@ public class CustomerService {
 		return (List<Customer>) repo.findAll();
 	}
 	
+	@SuppressWarnings("null")
 	public Customer get(Long id) {
 		return repo.findById(id).get();
 	}
 	
+	@SuppressWarnings("null")
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}

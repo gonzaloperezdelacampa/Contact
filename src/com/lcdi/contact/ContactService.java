@@ -3,6 +3,7 @@ package com.lcdi.contact;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.lang.NonNull;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -11,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ContactService {
 	@Autowired ContactRepository repo;
 	
+	@SuppressWarnings("null")
 	public void save(Contacts contact) {
 		repo.save(contact);
 	}
@@ -19,10 +21,11 @@ public class ContactService {
 		return (List<Contacts>) repo.findAll();
 	}
 	
-	public Contacts get(Long id) {
+	public Contacts get(@NonNull Long id) {
 		return repo.findById(id).get();
 	}
 	
+	@SuppressWarnings("null")
 	public void delete(Long id) {
 		repo.deleteById(id);
 	}
