@@ -10,6 +10,8 @@ public class ContactNotFoundException extends RuntimeException {
 
 	public ContactNotFoundException() {
 		super("Contacts does not exist");
+		
+		
 	}
 
 }
